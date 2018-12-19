@@ -6,7 +6,7 @@
 #    By: vopolonc <vopolonc@student.unit.ua>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/29 13:54:42 by vopolonc          #+#    #+#              #
-#    Updated: 2018/12/19 14:19:12 by vopolonc         ###   ########.fr        #
+#    Updated: 2018/12/19 14:25:50 by vopolonc         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -23,7 +23,7 @@ ft_strsplit.c ft_lstadd.c ft_putchar.c ft_striter.c ft_strstr.c ft_lstdel.c \
 ft_putchar_fd.c ft_striteri.c ft_strsub.c ft_lstdelone.c ft_putendl.c \
 ft_strjoin.c ft_strtrim.c ft_lstiter.c ft_putendl_fd.c ft_strlcat.c \
 ft_tolower.c ft_lstmap.c ft_putnbr.c ft_strlen.c ft_toupper.c ft_lstnew.c \
-ft_putnbr_fd.c ft_strmap.c
+ft_putnbr_fd.c ft_strmap.c get_next_line.c
 OBJ := $(SRCS:%.c=%.o)
 HEAD = includes/
 
@@ -37,7 +37,7 @@ $(OBJ): $(SRCS)
 	gcc $(FLAGS) -I $(HEAD) -c $(SRCS)
 
 clean:
-	rm -f $(O)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
