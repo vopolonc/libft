@@ -6,7 +6,7 @@
 /*   By: vopolonc <vopolonc@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/31 15:34:07 by vopolonc          #+#    #+#             */
-/*   Updated: 2018/11/26 13:33:44 by vopolonc         ###   ########.fr       */
+/*   Updated: 2019/01/22 15:09:51 by vopolonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ char	*ft_strdup(const char *s1)
 		arr[i] = s1[i];
 		i++;
 	}
-	arr[i] = '\0';
+	arr[i++] = '\0';
 	return (arr);
 }

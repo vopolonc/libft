@@ -1,20 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_minus.c                                      :+:      :+:    :+:   */
+/*   ft_fchrr.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vopolonc <vopolonc@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/17 14:23:32 by vopolonc          #+#    #+#             */
-/*   Updated: 2019/01/12 13:38:59 by vopolonc         ###   ########.fr       */
+/*   Created: 2019/01/30 12:19:07 by vopolonc          #+#    #+#             */
+/*   Updated: 2019/01/30 12:19:08 by vopolonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long long	ft_is_minus(long long n)
+char			*ft_fchrr(char *src, int chr, int pres)
 {
-	if (n < 0)
-		return (1);
-	return (0);
+    char		*dst;
+    size_t		i;
+	size_t		j;
+
+	i = -1;
+	j = -1;
+	dst = (char*)malloc(sizeof(char) + (strlen(src) + pres + 1));
+	while (++i < strlen(src))
+		dst[i] = src[i];
+	while (++j < (size_t)pres)
+		dst[i++] = chr;
+	dst[i + 1] = '\0';
+	ft_strdel(&src);
+	free(src);
+	return (dst);
 }

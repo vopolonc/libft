@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_minus.c                                      :+:      :+:    :+:   */
+/*   ft_get_numb_len.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vopolonc <vopolonc@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/17 14:23:32 by vopolonc          #+#    #+#             */
-/*   Updated: 2019/01/12 13:38:59 by vopolonc         ###   ########.fr       */
+/*   Created: 2019/01/10 14:18:29 by vopolonc          #+#    #+#             */
+/*   Updated: 2019/01/12 13:25:25 by vopolonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long long	ft_is_minus(long long n)
+long long	ft_get_numb_len(long long i)
 {
-	if (n < 0)
-		return (1);
-	return (0);
+	long long  j;
+
+	j = 1;
+	while ((i = i / 10) > 0)
+		j++;
+	return (j);
 }

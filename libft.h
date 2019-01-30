@@ -6,7 +6,7 @@
 /*   By: vopolonc <vopolonc@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/29 12:58:15 by vopolonc          #+#    #+#             */
-/*   Updated: 2018/11/17 14:31:12 by vopolonc         ###   ########.fr       */
+/*   Updated: 2019/01/30 12:19:40 by vopolonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,8 @@ int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_skip(const char *str);
-int					ft_is_minus(int n);
+long long			ft_is_minus(long long n);
+long long			ft_get_numb_len(long long i);
 char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strcat(char *s1, const char *s2);
@@ -69,7 +70,9 @@ char				*ft_strnew(size_t size);
 char				*ft_strtrim(char const *s);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				**ft_strsplit(char const *s, char c);
-char				*ft_itoa(int n);
+char				*ft_itoa(long long n);
+char				*ft_fchr(char *src, int chr, int pres);
+char				*ft_fchrr(char *src, int chr, int pres);
 size_t				ft_strlen(const char *s);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t				ft_int_len(int n);
